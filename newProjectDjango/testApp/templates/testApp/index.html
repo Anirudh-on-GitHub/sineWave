@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title><h1 style="background-color:rgb(88, 141, 194);">Hello, User</h1></title>
+</head>
+<body>
+    <strong>
+        <h2>Hello User!</h2>
+        <h3>{{q1}}</h3>
+        <hr>
+        <form action="/outputsine" method="get">
+            <label for="Frequency">{{q}}</label>
+            <input type="text" id="Frequency" name="Frequency">
+            <br>
+            <br>
+            <input type="Submit" value="Submit">
+        </form>
+        {% if encoded_image %}
+        <img src="data:image/png;base64,{{ encoded_image }}" alt=" Sine wave">
+        {% endif %}
+    </strong>
+</body>
+</html>
